@@ -1,4 +1,4 @@
-# Neighborhood Map v1.0 06-18-2018
+# Neighborhood Map v1.1 06-18-2018
 
 Neighborhood Map is a Udacity project in the Advanced JS module. It's meant to practice the use of Async API calls using AJAX, and MVC/MVVM structuring.
 
