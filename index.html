@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Galveston Seafood Eats</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+
+    <!-- CSS files and CDNs -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Poor+Story" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+  </head>
+  <body>
+    <!-- Element for errors -->
+    <div id="error-handling" class="errors">
+
+    </div>
+
+    <!-- Side Nav for Tablet/Desktop view -->
+    <div id="sideNav" class="sidenav">
+      <h2 id="small-hdr" class="pt-sans">Galveston Seafood Eats</h2>
+      <!-- Filter functionality using KO -->
+      <div id="filter">
+        <input id="filter-field" type="search" name="filter" placeholder="Start typing to filter" data-bind="textInput: userInput">
+      </div>
+      <!-- List View of default locations using KO -->
+      <div id="list-view">
+        <ul data-bind="foreach: restaurants">
+          <li class="pt-sans" data-bind="text: title, click: popMarker, visible: show"></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Map element -->
+    <div id="map" class="container">
+
+    </div>
+
+    <!-- Bottom Nav for Mobile views -->
+    <div id="bottomNav" class="sidenav">
+      <h2 id="small-hdr" class="pt-sans">Galveston Seafood Eats</h2>
+      <!-- Filter functionality using KO -->
+      <div id="filter">
+        <input id="filter-field" type="search" name="filter" placeholder="Start typing to filter" data-bind="textInput: userInput">
+      </div>
+      <!-- List View of default locations using KO -->
+      <div id="list-view">
+        <ul data-bind="foreach: restaurants">
+          <li class="pt-sans" data-bind="text: title, click: popMarker, visible: show"></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- KnockoutJS -->
+    <script type='text/javascript' src='bower_components/knockout/dist/knockout.js'></script>
+    <!-- Main app -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- Google MAPS API -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyBjtCDoZqt1sTIncSq-6yWlCR7_FFfX_68&v=3&callback=initMap"></script>
+    <!-- JQuery CDN -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  </body>
+</html>

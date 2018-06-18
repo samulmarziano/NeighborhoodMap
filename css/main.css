@@ -1,0 +1,110 @@
+/* GENERAL */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #727272;
+}
+
+.hidden {
+  display: none;
+}
+
+/* MAP */
+#map {
+  height: 100%;
+}
+
+/* SIDE NAV PANEL */
+#small-hdr {
+  color: white;
+  text-align: center;
+  margin: 15px 0;
+}
+
+#sideNav {
+  float: left;
+}
+
+ /* HIDES BOTTOM NAV IN TABLET/DESKTOP DISPLAYS */
+#bottomNav {
+  display: none;
+}
+
+/* FILTER FEATURE */
+#filter {
+  text-align: center;
+  margin-top: 10px;
+  height: 36px;
+}
+
+#filter-field {
+  font-size: 14px;
+  height: inherit;
+  width: 90%;
+  padding-left: 5px;
+  border-radius: 5px;
+}
+
+/* LIST VIEW ITEMS */
+ul {
+  list-style: none;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+li {
+  font-size: 14px;
+  color: white;
+  padding: 5px 5px 5px 7px;
+  margin: 5px;
+  border: 1px solid #bfbfbf;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px 0px rgba(191,191,191,0.5);
+}
+
+li:hover {
+  background-color: white;
+  color: #727272;
+  cursor: pointer;
+}
+
+/* FONTS */
+.pt-sans {
+  font-family: 'PT Sans', sans-serif;
+}
+
+.poor-story {
+  font-family: 'Poor Story', cursive;
+}
+
+/* RESPONSIVE: MOBILE */
+@media screen and (max-width: 640px) {
+  /* ADJUSTS MAP FOR SMALLER SCREEN */
+  #map {
+    height: 60%;
+  }
+
+  /* NAV WILL BE ON BOTTOM
+  SO CONTROLS AT FULL WIDTH */
+  #controls {
+    width: 100%;
+  }
+
+  /* HIDE SIDE NAV */
+  #sideNav {
+    display: none;
+  }
+
+  /* SHOW BOTTOM NAV */
+  #bottomNav {
+    display: block;
+  }
+
+  /* ADJUST LIST ITEMS FOR
+  MOBILE VIEW */
+  li {
+    height: 36px;
+    padding: 10px 0 0 5px;
+  }
+}
