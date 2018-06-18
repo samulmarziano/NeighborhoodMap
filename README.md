@@ -41,3 +41,4 @@ This repository is a class project for [Udacity](https://www.udacity.com/)'s *Ad
 ## Versioning
 
 * 1.0 - Original Commit
+* 1.1 - Corrected non-working error handling
