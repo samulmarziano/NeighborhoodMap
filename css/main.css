@@ -10,6 +10,19 @@ html, body {
   display: none;
 }
 
+.unhide {
+  display: block;
+}
+
+/* ERROR HANDLING */
+.errors {
+  width: 75%;
+  text-align: center;
+  font-size: 26px;
+  color: navajowhite;
+  float: right;
+}
+
 /* MAP */
 #map {
   height: 100%;
@@ -85,6 +98,12 @@ li:hover {
     height: 60%;
   }
 
+  /* ERROR HANDLING */
+  .errors {
+    width: 100%;
+    margin: 25px 0 0 0;
+  }
+
   /* NAV WILL BE ON BOTTOM
   SO CONTROLS AT FULL WIDTH */
   #controls {
@@ -106,5 +125,15 @@ li:hover {
   li {
     height: 36px;
     padding: 10px 0 0 5px;
+  }
+}
+
+/* RESPONSIVE: TABLET */
+@media screen and (min-width: 641px) and (max-width: 800px) {
+  /* ADJUSTS THE ERROR MESSAGE FOR TABLETS */
+  .errors {
+    width: 100%;
+    float: none;
+    margin: 0;
   }
 }

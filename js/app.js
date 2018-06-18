@@ -193,9 +193,9 @@ function initMap() {
 
           marker.iwContent;
         },
-        error: function( err ) {
-          // Sends to errorHandling function
-          errorHandling( 'FourSquare request', err );
+        error: function(  ) {
+          // Displays the error in the InfoWindow
+          iwContent = '<div>Could not communicate with FourSquare. Please refresh the page and try again.</div>';
         }
       });
     })(i);
@@ -254,12 +254,12 @@ let ViewModel = function() {
 
 // Allows error handling in one method,
 // instead of writing code each time
-function errorHandling( subj, err ) {
-  console.log( 'Issue with ' + subj + ': ' + err );
+function googleError() {
+  alert('Could not load Google Maps. Please refresh the page and try again.');
   // Compile error HTML
-  const errorHtml = '<span class="error-msg">Issue with ' + subj + ': ' + err + '</span>';
+  let errorHtml = '<div class="errors pt-sans">Could not load Google Maps. Please refresh the page and try again.</div>';
   // Adds error msg to pre-defined element in DOM
-  document.getElementById( 'error-handling' ).HTML( errorHtml );
+  document.getElementById( 'map' ).innerHTML = errorHtml;
 }
 
 // Applies KO bindings for use with DOM
